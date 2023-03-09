@@ -1,0 +1,97 @@
+body {
+    background-color: #1b2838;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-card {
+    height: 226px;
+    width: 226px;
+    background-image: url("nassim-allia-ot-HSrLNTP0-unsplash.jpg");
+    background-size: cover;
+    border-top-right-radius: 15px;
+    color: white;
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    display: grid;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    width: fit-content;
+    width: calc((226px * 4) + 15px * 3 + 45px * 2);
+    overflow: visible;
+}
+
+.menu-section {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;  
+}
+
+button {
+    width: 35px;
+}
+
+.button-left {
+    margin-right: 10px;
+}
+
+.button-right {
+    margin-left: 10px;
+}
+
+.menu-section[data-active="false"] {
+    display: none !important;
+}
+
+.inner-menu-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: calc(226px * 4 + 15px*3);
+    gap: 15px;
+   
+}
+
+.fade-in {
+    animation: fade-in-out 1s 0s ease-in-out 1;
+}
+
+@keyframes fade-in-out {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.2;
+    } 100% {
+        opacity: 1;
+    }
+    
+}
+
+button {
+    height: 150px;
+    margin-block: auto;
+    font-size: 40px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transform: translateX(0);
+    transition: all 0.2s ease-in-out;
+}
+
+button:nth-child(1):hover {
+    transform: translateX(-10px);
+}
+
+.button-right:hover {
+    transform: translateX(10px);
+}

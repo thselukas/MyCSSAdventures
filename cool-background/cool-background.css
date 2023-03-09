@@ -1,0 +1,39 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    
+}
+
+.main-content {
+    background-image: url("https://invertase.io/assets/images/header_shadow.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: 0vh;
+    background-position-y: 10vh;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    animation: moveBlob 10s infinite ease-in-out forwards;
+}
+
+@keyframes moveBlob {
+    0% {
+        background-position-x: 0vw;
+        background-position-y: 0vh;
+    }
+    33% {
+        background-position-x: 50vw;
+    }
+    60% {
+        background-position-x: 50vw;
+        background-position-y: 20vw;
+    }
+    100% {
+        background-position-x: 0vw;
+        background-position-y: 0vh;
+    }
+}
